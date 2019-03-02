@@ -7,13 +7,14 @@ PACKAGE_VERSION = $(THEOS_PACKAGE_BASE_VERSION)
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = cyurl
+cyurl_CFLAGS = -fobjc-arc
 cyurl_FILES = Tweak.xm
 cyurl_FRAMEWORKS = UIKit
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
-	install.exec "killall -9 Cydia"
+	install.exec "killall -9 Cydia Preferences"
 
 purge::
 	@rm -Rf .theos packages
