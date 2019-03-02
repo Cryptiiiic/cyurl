@@ -1,0 +1,9 @@
+Package: com.cryptic.cyurl
+Name: CyURL
+Depends: mobilesubstrate
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Adding sources to Cydia automatically defaults to "https://" instead of "http://".
+Maintainer: Cryptic
+Author: Cryptic
+Section: Tweaks
