@@ -18,7 +18,7 @@ after-install::
 
 purge::
 	@rm -Rf .theos packages
-	@find . -name .DS_Store -exec rm -Rf {} \;
+	@find . -name .DS_Store -delete
 	$(ECHO_BEGIN)$(PRINT_FORMAT_RED) "Purging"$(ECHO_END); $(ECHO_PIPEFAIL)
 	
 SUBPROJECTS += cyurlprefs

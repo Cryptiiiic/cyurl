@@ -10,7 +10,6 @@ inline BOOL PreferencesBool(NSString* key, BOOL fallback)
 - (void)addTextFieldWithValue:(id)value label:(id)label
 {
 	BOOL toggle = PreferencesBool(@"urltoggle", YES);
-	value = toggle ? @"https://" : value;
-	%orig;
+	%orig(toggle ? @"https://" : value, label);
 }
 %end
